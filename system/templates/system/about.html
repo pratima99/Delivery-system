@@ -1,0 +1,430 @@
+{% extends "system/header.html" %}
+{% block content %}
+<style>
+ body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color:#E6E6FA;
+}
+img{
+position: absolute;
+    top: 19%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#00264d;
+    font-weight:bold;
+}
+h1:before,
+h1:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+h1:after {
+    margin: 0 0 0 20px;
+}
+   footer {
+   clear: both;
+    position: relative;
+      background-color: #00264d;
+      color: white;
+      padding: 5px;
+      margin-top:25px;
+      }
+</style>
+<body>
+<div class="container">
+    <h1>About Us</h1><br>
+<p><strong style="font-size:medium;color:#faa21b;">Ontime Supply</strong>  is a one stop solution to logistic management. From a onetime order to deliver of your goods to the predefined location to managing your entire logistic and delivery function, we are committed to provide you with dependable and customised logistics management service in various cities throughout Nepal.
+    Established in 2018 by a team of young entrepreneurs, motivated by the success stories of several multinational firms through efficient logistic management, we are engaged in providing a well planned, customised logistic and delivery solution to support the continuous growth of your business.
+We also provide a hassle free moving services to households who seek swift and .....
+
+As an initiative to provide a flexible working schedule to individuals who have the zeal to work and live an independent life but cannot commit to a full time job, we have our ....... Program
+</p>
+    <p style="color: #b30000;font-weight:bold;">VISION:</p>
+<p>To become the customer’s first choice through innovative and customised logistic solution
+</p>
+    <p style="color: #b30000;font-weight:bold;">MISSION:</p>
+
+<p>To provide corporate and household customers with reliable, timely, tailored and well planned support in managing their logistic and delivery function</p>
+<p>To open up the opportunity of flexible working hour to the active workforce
+</p>
+    <p style="color: #b30000;font-weight:bold;">WHY CHOOSE US?
+</p>
+    <p>Our team of experienced and creative members are committed to provide you with dependable, customised and cost effective measures of logistic management service
+    Our presence in the digital world sets us apart. We are just a click away from sharing your entire logistic management burden.
+
+   Our user friendly and easy to access webpage based enquiry and order placement platform saves your time and effort.
+
+    Our online platform is open to all those who wish to enquire, place orders and become a part of our team, regardless your location and time of the day. You communicate; we will reach out to you with a solution.
+</p>
+</div>
+
+<footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+      <p>Home</p>
+  </div>
+     <div class="col-sm-4">
+      <p>About Us</p>
+  </div>
+     <div class="col-sm-4">
+      <p>Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</body>
+{% endblock %}
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'system/css/custom.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+  <style>
+ body, html{
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+  </style>
+<body>
+<div class="bg">
+<div id="topheader">
+  <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			 <div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				  </button>
+			 </div>
+			 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				  <ul class="nav navbar-nav">
+						<li class="active"><a href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a></li>
+						<li><a href="{% url 'biker' %}">Biker</a></li>
+						<li><a href="{% url 'trucker' %}">Trucker</a></li>
+						<li><a href="{% url 'transport' %}">Transport Company</a></li>
+				  </ul>
+				  <ul class="nav navbar-nav navbar-right">
+					  <li><a href=""><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					     <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				  </ul>
+			 </div>
+		</div>
+  </nav>
+</div>
+<script>
+$(document).ready(function() {
+  $('li.active').removeClass('active');
+  $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+});
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+    <div class="image1">
+      <a href="#" data-toggle="tooltip" data-placement="right"  title="Household Management"><img src="{% static 'system/images/bike.png' %}"class="img-circle"  width="40" height="40" ></a>
+
+    </div>
+
+    <div class="image2">
+        <a href="#" data-toggle="tooltip" data-placement="right"  title="Corporate Delivery"><img src="{% static 'system/images/corporate.png' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+    <div class="image3">
+         <a href="#" data-toggle="tooltip" data-placement="right"  title="Personal Delivery"><img src="{% static 'system/images/send.png' %}"class="img-circle"  width="40" height="40"></a>
+    </div>
+    <div class="image4">
+         <a href="#" data-toggle="tooltip" data-placement="right"  title="Office Relocation"><img src="{% static 'system/images/delivery.png' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+<div class="container">
+<div class="logo">
+    <img src="{% static 'system/images/ontime.png' %}" width="250px" height="250px">
+</div>
+
+<div class="imag1">
+       <a href="#" data-toggle="tooltip" data-placement="right"  title="Household Management"><img src="{% static 'system/images/ser.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+
+    </div>
+    <div class="imag2">
+       <a href="#" data-toggle="tooltip" data-placement="right"  title="Corporate Delivery"><img src="{% static 'system/images/ser.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+    <div class="imag3">
+         <a href="#" data-toggle="tooltip" data-placement="right"  title="Personal Delivery"><img src="{% static 'system/images/ser.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+    <div class="imag4">
+         <a href="#" data-toggle="tooltip" data-placement="right"  title="Office Relocation"><img src="{% static 'system/images/ser.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+
+    <div class="dropdown">
+    <button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">Employee Yourself
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="{% url 'biker' %}">As a Biker</a></li>
+         <li class="divider"></li>
+         <li><a href="{% url 'trucker' %}">As a Trucker</a></li>
+         <li class="divider"></li>
+             <li><a href="{% url 'transport' %}">As a Transport Company</a></li>
+    </ul>
+  </div>
+    <div class="dropdown1">
+    <button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">Book Services
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Household Management</a></li>
+        <li class="divider"></li>
+      <li><a href="#">Corporate Delivery</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Personal Delivery</a></li>
+        <li class="divider"></li>
+      <li><a href="#">Office Relocation</a></li>
+    </ul>
+  </div>
+
+</div>
+</div>
+<script>
+   $('img').on('click',function(){
+    $('#inputField').show();
+});
+</script>
+ <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+     <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</body>
+</html>
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 30px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px solid red;
+    -webkit-border-radius: 2px;
+    border-radius: 2px solid red;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 60%;
+    -webkit-border-radius: 60%;
+    border-radius: 60%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    background-color:#E3951D;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: rgb(12, 97, 33);
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(12, 97, 33);
+}
+footer {
+      background-color: #006622;
+      color: white;
+      padding: 5px;
+      margin-top:3px;
+      }
+</style>
+</head>
+<body>
+{% if form.errors %}
+<p>There is something wrong with what you have entered</p>
+{% endif %}
+{% if next %}
+<p>You can't access that page</p>
+{% endif %}
+ <div class="container">
+        <div class="card card-container">
+            {% load staticfiles %}
+            <img id="profile-img" class="profile-img-card" src="{% static 'system/images/ontime.png' %}"  />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div><!-- /card-container -->
+    </div>
+<script>
+$( document ).ready(function() {
+    loadProfile();
+});
+
+function getLocalProfile(callback){
+    var profileImgSrc      = localStorage.getItem("PROFILE_IMG_SRC");
+    var profileName        = localStorage.getItem("PROFILE_NAME");
+    var profileReAuthEmail = localStorage.getItem("PROFILE_REAUTH_EMAIL");
+
+    if(profileName !== null
+            && profileReAuthEmail !== null
+            && profileImgSrc !== null) {
+        callback(profileImgSrc, profileName, profileReAuthEmail);
+    }
+}
+
+function loadProfile() {
+    if(!supportsHTML5Storage()) { return false; }
+    getLocalProfile(function(profileImgSrc, profileName, profileReAuthEmail) {
+        $("#profile-img").attr("src",profileImgSrc);
+        $("#profile-name").html(profileName);
+        $("#reauth-email").html(profileReAuthEmail);
+        $("#inputEmail").hide();
+        $("#remember").hide();
+    });
+}
+
+
+function supportsHTML5Storage() {
+    try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+    } catch (e) {
+        return false;
+    }
+}
+function testLocalStorageData() {
+    if(!supportsHTML5Storage()) { return false; }
+    localStorage.setItem("PROFILE_IMG_SRC", "//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" );
+    localStorage.setItem("PROFILE_NAME", "César Izquierdo Tello");
+    localStorage.setItem("PROFILE_REAUTH_EMAIL", "oneaccount@gmail.com");
+}
+</script>

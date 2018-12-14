@@ -1,0 +1,67 @@
+{% extends "system/header.html" %}
+{% block content %}
+{% load staticfiles %}
+<style>
+ body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+   padding-buttom: 0px;
+    background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url(/static/system/images/del.jpg);
+   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.navbar {
+margin-bottom:0px !important;
+}
+h1 {
+    text-shadow: 2px 2px #FF0000;
+}
+   footer {
+   clear: both;
+    position: relative;
+      background-color: #00264d;
+      color: white;
+      padding: 5px;
+      margin-top:110px;
+      }
+.btn {
+background-color: #faa21b;
+color:#b30000;
+}
+   </style>
+<body>
+<br>
+<center><h1 style="font-weight:bold;color:#faa21b;">Need Services for Office Relocation?</h1></center>
+
+
+<div class="container"><br><br>
+    <h3 style="color:white;">OnTime Supply is here to provide the best office relocation facilities in Nepal.</h3><br>
+    <p style="color:white;font-size:18px;"> ●	Extremely convenient and time efficient service </p>
+    <p style="color:white;font-size:18px;"> ●	Pack and Unpack Facilities available</p>
+    <p style="color:white;font-size:18px;"> ●	Guaranteed safety of your precious items</p>
+    <p style="color:white;font-size:18px;"> ●	High-quality service and expertise in Nepal.</p>
+   <br>
+    <a href="{% url 'officemore' %}" class="btn " role="button">View more</a>
+
+ <a href="{% url 'ofbook' %}" class="btn " role="button">Book Office Services</a>
+
+
+</div>
+ <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+     <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</body>
+{% endblock %}

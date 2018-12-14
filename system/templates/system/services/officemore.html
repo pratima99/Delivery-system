@@ -1,0 +1,64 @@
+{% extends "system/header.html" %}
+{% block content %}
+<style>
+ body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+   padding-buttom: 0px;
+  background-color:#e6ecff;
+}
+.navbar {
+margin-bottom:0px !important;
+}
+h1 {
+    text-shadow: 2px 2px #FF0000;
+}
+p{
+color:#000033;
+}
+   footer {
+   clear: both;
+    position: relative;
+      background-color: #00264d;
+      color: white;
+      padding: 5px;
+      margin-top:50px;
+      }
+
+   </style>
+<body>
+
+
+<div class="container">
+    <br>
+    <center><h1 style=" color:#faa21b;">OFFICE RELOCATION SERVICE</h1></center><br>
+<p>Whether you run a startup or a well-established company, we understand every entrepreneur has a certain visualization regarding their workplace. Sometimes, these dreams get fulfilled at once while others might take a series of relocation before meeting your dream space.</p>
+<p>
+But shifting your office can be the most challenging thing ever in Nepal. It could be more complex than moving a home as it requires a lot of collaborations within the company and transfer of delicate belongings. It is inevitably a headache to pack and unpack all types of equipment and at the same time ensure their safety.
+
+</p>
+    <p>Relocating can be undeniably challenging.</p>
+    <p>It is REASONABLE for you to get worried about the new set of office furnitures, confidential documents, fragile electronic equipments including computers, copiers as well as everything else that needs to move to a newer location.</p>
+<p>Let us handle your relocation trouble so that you can focus on your day-to-day work.</p>
+    <p>Ontime Supply provides all the required infrastructures, transportation facilities along with experienced support from the staff team members. With our expertise in moving industry, we deliver high-quality service in Nepal. We ensure the pre-moving plans to coordinate the packing and even assist in unpacking everything at a new workplace. </p>
+<p>Now is the right time to relocate and safeguard your precious items under our guidance.</p>
+    <p style=" font-weight:bold;color:#b30000;">WE ARE JUST A CLICK AWAY or DO GIVE US A CALL TODAY!!!</p>
+    <p>We leave our Impressions, not a mark for whine.</p>
+</div>
+
+ <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+     <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</body>
+{% endblock %}

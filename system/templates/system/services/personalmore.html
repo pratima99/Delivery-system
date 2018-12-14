@@ -1,0 +1,71 @@
+{% extends "system/header.html" %}
+{% block content %}
+<style>
+ body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+   padding-buttom: 0px;
+  background-color:#e6ecff;
+}
+
+
+.navbar {
+margin-bottom:0px !important;
+}
+h1 {
+    text-shadow: 2px 2px #FF0000;
+}
+p{
+color:#000033;
+}
+
+   footer {
+   clear: both;
+    position: relative;
+      background-color: #00264d;
+      color: white;
+      padding: 5px;
+      margin-top:8px;
+      }
+
+   </style>
+<body>
+
+<div class="container">
+    <br>
+    <center><h1 style=" color:#faa21b;">PERSONALISED DELIVERY SERVICES</h1></center><br>
+ <p>These days you are needed to be everywhere at the same time. You need to attend a business meeting, have a happening social life and even fulfill your personal responsibilities. Between all these personal and professional obligations, it is very difficult maintain your hectic schedule.
+
+</p>
+    <p>One of these days, you might get swamped with some important office work or simply waste hours sitting in the traffic or might even try running across the town to save some time. Sometimes you feel too lazy to get out of the house and want to avoid the rain and dust. Whatever might be the reason, we are here. Let us get your work done and dusted. </p>
+<p>We understand the value of your time. Ontime Supply is here to lighten your load by providing simple, yet effective solutions.</p>
+    <p>With our services,</p>
+
+<p>●	Surprise your loved ones, shower them with gifts,</p>
+    <p>●	send your confidential as well as non-confidential documents securely.</p>
+    <p>●	receive your mobile phone that you forgot at your home.</p>
+    <p>●	Send essential medicines that your loved one forgot to take</p>
+    <p>●	Deliver bank cheques, photos, important forms safely</p>
+<p>And almost everything else that you want delivered to any corner of Nepal.
+
+    Why worry when you can track your deliveries right from your home and enjoy the peace of mind.</p>
+     <p style=" font-weight:bold;color:#b30000;">WE ARE JUST A CLICK AWAY or DO GIVE US A CALL TODAY!!!</p>
+    <p>We leave our Impressions, not a mark for whine.</p>
+</div>
+
+ <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+     <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</body>
+{% endblock %}

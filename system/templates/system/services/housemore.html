@@ -1,0 +1,74 @@
+{% extends "system/header.html" %}
+{% block content %}
+<style>
+ body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+   padding-buttom: 0px;
+   background-color:#e6ecff;
+}
+
+.navbar {
+margin-bottom:0px !important;
+}
+h1 {
+    text-shadow: 2px 2px #FF0000;
+}
+p{
+color:#000033;
+}
+   footer {
+   clear: both;
+    position: relative;
+      background-color: #00264d;
+      color: white;
+      padding: 5px;
+      margin-top:35px;
+      }
+
+   </style>
+<body>
+
+<div style="float:left;">
+    <label for="list">Type Of Service</label>
+    <select  id="sel" >
+        <option value="house">Household Moving</option>
+        <option value="corporate">Corporate Delivery</option>
+        <option value="personal">Personal Delivery</option>
+        <option value="office">Office Relocation</option>
+      </select>
+  </div>
+
+<div class="container"><br>
+    <center><h1 style=" color:#faa21b;">HOUSEHOLD MOVING SERVICES</h1></center><br>
+    <p>Whether you are planning to shift to a new home, or a new rental apartment, the feeling is reasonably delightful.
+        It is obvious to be excited for a better home for you and your family. Afterall, home is where our heart lies.</p>
+    <p>
+But Household shifting can be undeniably challenging. With the busy schedule we have these days, shifting your home can be more hectic. It is inevitably a headache to pack and unpack all types of equipments and at the same time, ensure their safety. And to make things worse, shifting goods require more than just a day.
+</p>
+    <p>It is quite obvious for you to get worried about your antique chandelier, new china set, furnitures, valuable utensils, photo albums, fragile electronic equipments including Vacuum cleaner, Television, Refrigerator as well as everything else that needs to be moved to your new place.</p>
+<p>We care about these items and know how much these could mean to your heart.</p>
+    <p>Let us help you through this hard time so that you can focus on your day-to-day work.</p>
+    <p>Ontime Supply provides you a trustworthy and dependable service by always treating everything like you would; with tenderness and care.We facilitate all the required infrastructures, transportation facilities along with experience and support from our staff members. With our expertise in moving industry, we deliver the finest services in Nepal. We ensure the pre-moving plans to coordinate the packing and even assist in unpacking everything at your new home. </p>
+<p>Now is the right time to relocate and safeguard your precious items under our guidance.
+    <p style=" font-weight:bold;color:#b30000;">WE ARE JUST A CLICK AWAY or GIVE US A CALL TODAY!!!</p>
+</p>
+    <p>We leave our Impressions, not a mark for whine.</p>
+</div>
+
+ <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+     <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</body>
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "system/header.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ontime Delivery</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'system/css/bootstrap.min.css' %}" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="system/js/bootstrap.min.js"></script>
+</head>
+  <style>
+   body{
+  overflow-y: hidden;
+overflow-x: hidden;
+  background-color:#e6ecff;
+}
+.logo{
+    position: absolute;
+    top: 19%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+}
+.box {
+    width: 85%;
+    border: 1px solid #00264d;
+    padding: 25px;
+    margin-left: 110px;
+    margin-top:2px;
+    height:295px;
+}
+input, label {
+    display:block;
+    width:130%;
+    border-radius: 1px;
+}
+
+button{
+background-color: #faa21b;
+color:white;
+margin-left:40%;
+}
+
+ footer {
+ clear: both;
+    position: relative;
+      background-color:#00264d;
+      color: white;
+      padding: 5px;
+      margin-top:58px;
+      }
+  </style>
+  <div>
+  <div class="logo">
+    <img src="{% static 'system/images/ontime.png' %}" width="160px" height="130px">
+</div><br>
+
+<form  method="post">
+
+    <div class="container">
+       <br>
+    <h1 style="color:#00264d; margin-left:350px ;margin-top:5px;">Ontime Supply Registration Form</h1>
+<br><br>
+        <div class="box">
+    <section>
+  <div style="float:left;margin-right:150px;font-family: Tahoma;">
+    <label for="name">Name</label>
+     <input type="text" placeholder="Enter name" name="name" required>
+  </div>
+
+  <div style="float:left;margin-right:150px;font-family: Tahoma;">
+    <label for="email">Email</label>
+   <input type="email" placeholder="Enter email" name="email" required>
+  </div>
+ <div style="float:left;font-family: Tahoma;">
+    <label for="psw">Password</label>
+    <input type="password" placeholder="Enter password" name="psw" required>
+  </div>
+
+  <br style="clear:both;" />
+
+    </section>
+<br>
+          <section>
+  <div style="float:left;margin-right:150px;font-family: Tahoma;">
+    <label for="number">Mobile Number</label>
+      <input type="tel" placeholder="Enter number" name="number" required>
+  </div>
+
+  <div style="float:left;margin-right:150px;font-family: Tahoma;">
+    <label for="location">Location</label>
+     <input type="text" placeholder="Enter location" name="location" required>
+  </div>
+ <div style="float:left;font-family: Tahoma;">
+    <label for="citizen">Citizenship Number</label>
+    <input type="number" placeholder="Enter citizenship number" name="citizen" required>
+  </div>
+
+  <br style="clear:both;" />
+
+    </section>
+        <br>
+      <section>
+  <div style="float:left;margin-right:150px;font-family: Tahoma;">
+    <label for="bike">Bike Number</label>
+       <input type="number" placeholder="Enter Bike no." name="bike" required>
+  </div>
+
+  <div style="float:left;font-family: Tahoma;">
+    <label for="license">License Number</label>
+      <input type="number" placeholder="Enter license number" name="license" required>
+  </div>
+  <br style="clear:both;" />
+    </section>
+<br>
+
+    <button class="btn" >Submit</button>
+ <p style="margin-left:75%;">Already have an account? <a href="#">Sign in</a>.</p>
+    </div>
+    </div>
+
+</form>
+
+
+  <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</html>
+{% endblock %}

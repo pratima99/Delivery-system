@@ -1,0 +1,86 @@
+
+.image1{
+position: absolute;
+    top: 17%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+.image1:hover{
+ transform: scale(1.5);
+}
+.image2{
+position: absolute;
+    top: 30%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+}
+.image2:hover{
+ transform: scale(1.5);
+}
+.image3{
+position: absolute;
+    top: 58%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+}
+.image3:hover{
+ transform: scale(1.5);
+}
+.image4{
+position: absolute;
+    top: 77%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+.image4:hover{
+ transform: scale(1.5);
+}
+.imag1{
+position: absolute;
+    top: 17%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+.imag1:hover{
+ transform: scale(1.5);
+}
+.imag2{
+position: absolute;
+    top: 30%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+}
+.imag2:hover{
+ transform: scale(1.5);
+}
+.imag3{
+position: absolute;
+    top: 58%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+}
+.imag3:hover{
+ transform: scale(1.5);
+}
+.imag4{
+position: absolute;
+    top: 77%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+.imag4:hover{
+ transform: scale(1.5);
+}
+.logo{
+    img: center;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer p {
+color:white;
+}
+footer p a{
+color:white;

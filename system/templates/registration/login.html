@@ -1,0 +1,128 @@
+{% extends 'system/header.html' %}
+{% block content %}
+
+<style>
+body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-buttom: 0px;
+}
+
+.bg{
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(/static/system/images/login1.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            -webkit-filter: blur(6px);
+            -moz-filter: blur(6px);
+            -o-filter: blur(6px);
+            -ms-filter: blur(6px);
+            filter: blur(6px);
+        }
+        .contact-form
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 400px;
+            padding: 80px 40px;
+            box-sizing: border-box;
+            background: rgba(0,0,0,.5);
+        }
+        .ontime{
+           img: center;
+           position: absolute;
+           top: 13%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+        }
+        .contact-form p
+        {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            color: #fff;
+        }
+        .contact-form input
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .contact-form input[type="email"],
+        .contact-form input[type="password"]
+        {
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+        }
+        .contact-form input[type="submit"] {
+            height: 30px;
+            color: #fff;
+            font-size: 15px;
+            background: #E3951D;
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            margin-top: 10%;
+        }
+        .contact-form a
+        {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+ footer {
+  clear: both;
+    position: relative;
+     background-color:black;
+      color: white;
+      padding: 5px;
+      margin-top:510px;
+      }
+
+</style>
+<body>
+{% load staticfiles %}
+<div class="bg"></div>
+      <div class="contact-form">
+        <img src="{% static 'system/images/ontime.png' %}" class="ontime" width="120" height="120">
+        <form>
+            <br><br>
+            <p>Email</p>
+            <input type="email" name="email" placeholder="Enter Email">
+            <p>Password</p>
+            <input type="password" name="psw" placeholder="Enter Password">
+            <input type="submit" name="" value="Login">
+        </form>
+    </div>
+
+ <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+     <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</body>
+
+{% endblock %}

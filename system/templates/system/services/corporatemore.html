@@ -1,0 +1,68 @@
+{% extends "system/header.html" %}
+{% block content %}
+<style>
+ body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+   padding-buttom: 0px;
+      background-color:#e6ecff;
+}
+
+.navbar {
+margin-bottom:0px !important;
+}
+h1 {
+    text-shadow: 2px 2px #FF0000;
+}
+p{
+color:#000033;
+}
+
+   footer {
+   clear: both;
+    position: relative;
+      background-color: #00264d;
+      color: white;
+      padding: 5px;
+      margin-top:73px;
+      }
+
+   </style>
+<body>
+
+
+<div class="container">
+    <br>
+    <center><h1 style=" color:#faa21b;">COMMERCIAL DELIVERY SERVICES</h1></center><br>
+<p>With the revolution of the internet and smartphones in Nepalese Market, the concept of online shopping is flourishing in Nepal. An arbitrary trust has been established among customers regarding online portals. And it is growing remarkably well.</p>
+<p>
+Despite having more than 30,000 websites registered under the e-commerce domain, customers are always the ones who get deceived with mediocre products and services. Because of the unhealthy competition between online portals, the quality of the products and services have lost their significance. After every online shopping, it has been a common ritual for customers to get anxious before their stuff gets delivered.
+</p>
+    <p>BUT DON'T WORRY!</p>
+    <p>
+We are here to regain your trust and prove the essence of a E-commerce portal with our services.
+</p>
+    <p>Whether you are staying at your home or working in your office, center your valuable time and energy into something productive while we deliver all your necessities to your doorstep. Ontime Supply understands your needs and we are here for you.</p>
+<p>Online Supply offers a wide range of products including clothing, footwear, accessories, mobile phones, Electronic Appliances, Gadgets and many more. We provide the best online experience to our customers throughout Nepal with outstanding services.
+It's easy and sensible
+</p>
+     <p style=" font-weight:bold;color:#b30000;">Try Our services Today! WE ARE JUST A CLICK AWAY.</p>
+    <p>We leave our Impressions, not a mark for whine.</p>
+</div>
+
+ <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+     <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</body>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends "system/header.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ontime Delivery</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'system/css/bootstrap.min.css' %}" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="system/js/bootstrap.min.js"></script>
+</head>
+  <style>
+   body{
+  overflow-y: hidden;
+overflow-x: hidden;
+  background-image:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url(/static/system/images/service.jpg);
+   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dropdown {
+position: absolute;
+    top: 50%;
+    left: 35%;
+
+}
+.dropdown1 {
+position: absolute;
+    top: 50%;
+    left: 55%;
+
+}
+.btn{
+ background-color:#faa21b;
+ color:#b30000;
+}
+ footer {
+ clear: both;
+    position: relative;
+      background-color:#00264d;
+      color: white;
+      padding: 5px;
+      margin-top:490px;
+      }
+
+  </style>
+  <body>
+
+<div class="image1">
+      <a href="#" data-toggle="tooltip" data-placement="right"  title="Household Management"><img src="{% static 'system/images/household.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+
+    </div>
+
+    <div class="image2">
+        <a href="#" data-toggle="tooltip" data-placement="right"  title="Corporate Delivery"><img src="{% static 'system/images/personal1.png' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+    <div class="image3">
+         <a href="#" data-toggle="tooltip" data-placement="right"  title="Personal Delivery"><img src="{% static 'system/images/per.jpg' %}"class="img-circle"  width="40" height="40"></a>
+    </div>
+    <div class="image4">
+         <a href="#" data-toggle="tooltip" data-placement="right"  title="Office Relocation"><img src="{% static 'system/images/office.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+<div class="container">
+<div class="logo">
+    <img src="{% static 'system/images/ontime.png' %}" width="250px" height="250px">
+</div>
+
+<div class="imag1">
+       <a href="#" data-toggle="tooltip" data-placement="right"  title="Household Management"><img src="{% static 'system/images/household.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+
+    </div>
+    <div class="imag2">
+       <a href="#" data-toggle="tooltip" data-placement="right"  title="Corporate Delivery"><img src="{% static 'system/images/personal1.png' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+    <div class="imag3">
+         <a href="#" data-toggle="tooltip" data-placement="right"  title="Personal Delivery"><img src="{% static 'system/images/per.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+    <div class="imag4">
+         <a href="#" data-toggle="tooltip" data-placement="right"  title="Office Relocation"><img src="{% static 'system/images/office.jpg' %}"class="img-circle"  width="40" height="40" ></a>
+    </div>
+
+    <div class="dropdown">
+    <button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">&nbsp;&nbsp;Employee Yourself &nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" style="background-color:#e6ecff;">
+      <li ><a href="{% url 'biker' %}" style="color:#b30000;">As a Biker</a></li>
+         <li class="divider"></li>
+         <li><a href="{% url 'trucker' %}" style="color:#b30000;">As a Trucker</a></li>
+         <li class="divider"></li>
+             <li><a href="{% url 'transport' %}" style="color:#b30000;;">As a Transport Company</a></li>
+    </ul>
+  </div>
+    <div class="dropdown1">
+    <button class="btn  dropdown-toggle" type="button" data-toggle="dropdown">&nbsp;&nbsp;Book Services&nbsp;&nbsp;&nbsp;
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" style="background-color:#e6ecff;">
+      <li><a href="{% url 'house' %}" style="color:#0E4D92;">Household Moving</a></li>
+        <li class="divider"></li>
+      <li><a href="{% url 'corporate' %}" style="color:#0E4D92;">Corporate Delivery</a></li>
+      <li class="divider"></li>
+      <li><a href="{% url 'personal' %}" style="color:#0E4D92;">Personal Delivery</a></li>
+        <li class="divider"></li>
+      <li><a href="{% url 'office' %}" style="color:#0E4D92;">Office Relocation</a></li>
+    </ul>
+  </div>
+
+</div>
+</div>
+<script>
+   $('img').on('click',function(){
+    $('#inputField').show();
+});
+</script>
+
+  <footer class="container-fluid text-center">
+    <br>
+     <div class="col-sm-4">
+         <p><a href="{% url 'index' %}">Home</a></p>
+  </div>
+     <div class="col-sm-4">
+     <p><a href="{% url 'about' %}">About Us</a></p>
+  </div>
+     <div class="col-sm-4">
+      <p><a href="{% url 'index' %}">Delivery Policy</p>
+  </div>
+    <br><br>
+       <p><span class="glyphicon glyphicon-copyright-mark"></span>  2018 Ontime Delivery</p>
+</footer>
+</html>
+{% endblock %}
